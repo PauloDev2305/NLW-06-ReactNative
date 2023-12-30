@@ -9,18 +9,13 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: theme.colors.backgraund,
   },
-  input: {
+  image: {
     height: 360,
     width: "100%",
-    borderWidth: 2,
-    borderRadius: 10,
-  },
-  image: {
-    height: 30,
-    width: 30,
   },
   content: {
     marginTop: -40,
+    paddingHorizontal: 50,
   },
   title: {
     color: theme.colors.heading,
@@ -30,8 +25,8 @@ export const styles = StyleSheet.create({
   },
   subTitle: {
     color: theme.colors.heading,
+    fontSize: 15,
     textAlign: "center",
     marginBottom: 64,
-    fontSize: 15,
   },
 });

@@ -1,11 +1,27 @@
 import { styles } from "./styles";
 
-import { Text, Image, View, TouchableOpacity } from "react-native";
+import {
+  Text,
+  Image,
+  View,
+  TouchableOpacity,
+  TouchableOpacityProps,
+} from "react-native";
 
-export const ButtonIcon = () => {
+import DiscordImg from "../../assets/discord.png";
+
+type Props = TouchableOpacityProps & {
+  title: string;
+};
+
+export const ButtonIcon = ({ title, ...rest }: Props) => {
   return (
-    <TouchableOpacity>
-      <View></View>
+    <TouchableOpacity {...rest} style={styles.container}>
+      <View style={styles.iconsWrapper}>
+        <Image source={DiscordImg} />
+      </View>
+
+      <Text style={styles.title}>{title}</Text>
     </TouchableOpacity>
   );
 };
